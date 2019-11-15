@@ -1,23 +1,22 @@
-var cedula = " ";
+
 function validarCampos() {
-    var nombres, apellidos, direccion, telefono, fechaDeNacimiento, correoElectronico, password;
-    cedula = document.getElementById("cedula").value;
-    nombres = document.getElementById("nombres").value;
-    apellidos = document.getElementById("apellidos").value;
-    direccion = document.getElementById("direccion").value;
-    telefono = document.getElementById("telefono").value;
-    fechaDeNacimiento = document.getElementById("fD").value;
-    correoElectronico = document.getElementById("correo").value;
-    password = document.getElementById("password").value;
+  var cedula =  document.getElementById("cedula").value;
     vcedula(cedula);
-    /*
-    vnombres();
-    vapellidos();
-    vdireccion();
-    vtelefono();
-    vfechaDeNacimiento();
-    vcorreoElectronico();
-    spassword();*/
+    form.addEventListener("submit", function(evt) {
+        if (form.checkValidity() === false) {
+          evt.preventDefault();
+          alert("Form is invalid - submission prevented!");
+          return false;
+        } else {
+          // To prevent data from being sent, we've prevented submission
+          // here, but normally this code block would not exist.
+          evt.preventDefault();
+          alert("Form is valid - submission prevented to protect privacy.");
+          
+          return false;
+        }
+      });
+
 }
 function vcedula(cedula) {
     if (!/^([0-9])*$/.test(cedula)) {
@@ -47,20 +46,23 @@ function vcedula(cedula) {
 		var h = v[v.length-1];
 		if(h==0) {
 			if(c==h) {
-				var valBolc = true;
+				alert("cedula correcta");
 			}else {
-				alert("cedula incorrecta")
+                alert("cedula incorrecta")
+                document.getElementById("cedula") = "";
+                return false
 			}
 		}else {
 			var x = 10-c;
 			if(x==h) {
 				var valBolc = true;
 			}else {
-				alert("cedula incorrecta")
+                alert("cedula incorrecta")
+                document.getElementById("cedula") = "";
+                return false
 			}
-		}
-          
+		} 
         
     }
-    
 }
+

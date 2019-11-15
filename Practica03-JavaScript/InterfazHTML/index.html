@@ -9,30 +9,30 @@
     <script type="text/javascript" src="validacion.js"></script>
 </head>
 <body>
-    <form id="formulario001" method="POST" action="" onsubmit="return validarCampos();">
+    <form id="formulario001" method="POST" action="bienvenidad.php" onsubmit="return validarCampos();">
         <label>Cédula: </label>
         <input type="text"  name="cedula" id="cedula">
         <br>
         <label >Nombres: </label>
-        <input type="text" name="nombres" id="nombres">
+        <input type="text" placeholder="Escriba el menos un nombre" required  pattern=".+[A-Za-z]+"  minlength="4"  name="nombres" id="nombres" >
         <br>
 		<label>Apellidos: </label>
-        <input type="text" name="apellidos" id="apellidos">
+        <input type="text" placeholder="Escriba el menos un apellido"  required pattern=".+[A-Za-z]+"  minlength="4" name="apellidos" id="apellidos"  >
         <br>
         <label>Dirección: </label>
         <input type="text" name="direccion" id="direccion">
         <br>
         <label>Teléfono: </label>
-        <input type="text" name="telefono" id="telefono">
+        <input type="tel" pattern="[0-9]{10}" name="telefono" id="telefono">
         <br>
         <label>Fecha de nacimiento: </label>
-        <input type="text" name="fD" id="fD">
+        <input type="text" placeholder="dd-mm-yyyy"  pattern="^([0-2][0-9]|3[0-1])(\/|-)(0[1-9]|1[0-2])\2(\d{4})$" name="fD" id="fD">
         <br>
         <label>Correo Electrónico: </label>
-        <input type="email" name="correo" id="correo">
+        <input type="email" placeholder="mail@est.ups.edu.ec o mail@ups.edu.ec" pattern=".+@.+[u][p][s][.][e][d][u][.][e][c]" title="Solo se permiten cuentas de ups.edu.ec  o est.ups.edu.ec" name="correo" id="correo">
         <br>
 		<label>Contaseña: </label>
-        <input type="password" name="password" id="password">
+        <input type="password" placeholder="min 8 caracteres,may(1),charS" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" name="password" id="password">
         <br>
         <input  id="boton" type="submit" value="Validar">
 	</form>
