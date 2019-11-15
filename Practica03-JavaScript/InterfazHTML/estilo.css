@@ -1,0 +1,28 @@
+*{
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+html{
+    background-color: cornflowerblue;
+}
+body{
+    width: 55%;
+    margin-left: 30%;
+    
+}
+label{
+    width: 20%;
+}
+
+label{
+    float: left;
+}
+#boton{
+    float: right;
+    margin-right: 60%;
+}
+body{
+    float: center;
+    background-color: white;
+}

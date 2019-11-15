@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Validacion de campos</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script type="text/javascript" src="validacion.js"></script>
 </head>
 <body>
-    
+    <form id="formulario001" method="POST" action="" onsubmit="return validarCampos();">
+        <label>Cédula: </label>
+        <input type="text"  name="cedula" id="cedula">
+        <br>
+        <label >Nombres: </label>
+        <input type="text" name="nombres" id="nombres">
+        <br>
+		<label>Apellidos: </label>
+        <input type="text" name="apellidos" id="apellidos">
+        <br>
+        <label>Dirección: </label>
+        <input type="text" name="direccion" id="direccion">
+        <br>
+        <label>Teléfono: </label>
+        <input type="text" name="telefono" id="telefono">
+        <br>
+        <label>Fecha de nacimiento: </label>
+        <input type="text" name="fD" id="fD">
+        <br>
+        <label>Correo Electrónico: </label>
+        <input type="email" name="correo" id="correo">
+        <br>
+		<label>Contaseña: </label>
+        <input type="password" name="password" id="password">
+        <br>
+        <input  id="boton" type="submit" value="Validar">
+	</form>
 </body>
 </html>
